@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32 Car Control</title>
+    <script>
+        function sendCommand(cmd) {
+            fetch(`/control/${cmd}`);
+        }
+    </script>
+</head>
+<body>
+    <h2>Control Your ESP32 Car</h2>
+    <button onclick="sendCommand('forward')">Forward</button>
+    <button onclick="sendCommand('backward')">Backward</button>
+    <button onclick="sendCommand('left')">Left</button>
+    <button onclick="sendCommand('right')">Right</button>
+    <button onclick="sendCommand('stop')">Stop</button>
+</body>
+</html>
